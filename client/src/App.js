@@ -1,28 +1,31 @@
-import React, { useState } from "react";
-import { Route } from "react-router-dom";
-import SavedList from "./Movies/SavedList";
-import MovieList from "./Movies/MovieList";
-import Movie from "./Movies/Movie";
-import UpdateMovie from "./Movies/UpdateMovie";
+import React, { useState } from 'react';
+import { Route } from 'react-router-dom';
+import SavedList from './Movies/SavedList';
+import MovieList from './Movies/MovieList';
+import Movie from './Movies/Movie';
+import UpdateMovie from './Movies/UpdateMovie';
 
 const App = () => {
   const [savedList, setSavedList] = useState([]);
 
-  const addToSavedList = movie => {
+  const addToSavedList = (movie) => {
     setSavedList([...savedList, movie]);
   };
 
   return (
     <>
+      <h1 style={{ color: 'white', textAlign: 'center', fontSize: 42 }}>
+        HTTP Movies Assignment(CRUD)
+      </h1>
       <SavedList list={savedList} />
-      <Route exact path="/" component={MovieList} />
+      <Route exact path='/' component={MovieList} />
       <Route
-        path="/movies/:id"
-        render={props => {
+        path='/movies/:id'
+        render={(props) => {
           return <Movie {...props} addToSavedList={addToSavedList} />;
         }}
       />
-      <Route path='/update-movie/:id' component={UpdateMovie}/>
+      <Route path='/update-movie/:id' component={UpdateMovie} />
     </>
   );
 };
