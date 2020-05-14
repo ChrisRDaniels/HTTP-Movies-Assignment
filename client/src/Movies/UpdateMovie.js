@@ -49,7 +49,7 @@ const UpdateMovie = props => {
         <input
           type="text"
           name="title"
-          onChange={handleChanges}
+          onChange={handleChanges}S
           placeholder="title"
           value={updateMovie.title}
         />
