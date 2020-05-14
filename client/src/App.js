@@ -15,7 +15,7 @@ const App = () => {
   return (
     <>
       <h1 style={{ color: 'white', textAlign: 'center', fontSize: 42 }}>
-        HTTP Movies Assignment(CRUD)
+        HTTP Movies Assignment
       </h1>
       <SavedList list={savedList} />
       <Route exact path='/' component={MovieList} />
