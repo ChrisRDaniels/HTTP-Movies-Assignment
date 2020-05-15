@@ -2,18 +2,20 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #f2f2f2;
+  background-color: #818181;
 }
 
 .movie-card {
-  background-color: #fff;
+  background-color: rgb(238, 238, 238);
   border: 0;
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
     0 2px 4px rgba(0, 0, 0, 0.24);
-  padding: 1rem;
+  padding: 2rem;
   cursor: pointer;
   position: relative;
-  margin: 1rem auto;
+  margin: 2rem auto;
+  width: 50vw;
+  border-radius: 8px;
 }
 
 .movie-director {
@@ -34,6 +36,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 8px;
+  width: 65vw;
 }
 
 .saved-list h3 {
@@ -44,7 +48,7 @@ body {
   margin: 0 10px;
 }
 .saved-active {
-  color: blue;
+  color: lightskyblue;
   border: 1px solid grey;
   padding: 5px;
 }
@@ -59,10 +63,10 @@ body {
   right: 25px;
   border: 1px solid grey;
   padding: 5px 10px;
-  background-color: lightseagreen;
+  background-color: lightskyblue;
 }
 .save-button:hover {
-  background-color: green;
+  background-color: black;
   color: white;
 }
 
@@ -74,4 +78,24 @@ body {
 .movie-warning {
   color: red;
   text-align: center;
+}
+
+/* unvisited link */
+a:link {
+  color: rgb(85, 151, 236);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(138, 115, 160);
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+}
+
+/* selected link */
+a:active {
+  color: blue;
 }
